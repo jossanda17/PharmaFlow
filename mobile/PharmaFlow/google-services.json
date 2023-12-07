@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "126234664095",
+    "project_id": "pharmaflow-407403",
+    "storage_bucket": "pharmaflow-407403.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126234664095:android:a9d3d6678199fc231a16aa",
+        "android_client_info": {
+          "package_name": "com.company.pharmaflow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLpWaRWUW4A7P3fGCOaYLlURX71hFeEwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
