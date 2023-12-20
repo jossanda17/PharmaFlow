@@ -1,7 +1,6 @@
 import uuid
 from flask import Blueprint, request, jsonify
 from firebase_admin import firestore
-from google.cloud.firestore_v1.base_query import FieldFilter
 
 db = firestore.client()
 db_penjualan = db.collection('penjualan')
@@ -31,17 +30,9 @@ def create():
 @API_penjualan.route('/read')
 def read():
     try:
-        try: 
-            obat_id = request.args['obat_id'] 
-        except KeyError: 
-            obat_id = None
         all_docs = {}
-        if obat_id == None:
-            for doc in db_penjualan.stream():
-                all_docs[doc.id] = doc.to_dict()
-        else:
-            for doc in db_penjualan.where(filter=FieldFilter("obat_id", "==", obat_id)).stream():
-                all_docs[doc.id] = doc.to_dict()
+        for doc in db_penjualan.stream():
+        	all_docs[doc.id] = doc.to_dict()
 
         return jsonify(all_docs), 200
     except Exception as e:
