@@ -1,5 +1,7 @@
 from flask import Blueprint, request, jsonify
 from firebase_admin import firestore
+from google.cloud.firestore_v1.base_query import FieldFilter
+import tensorflow as tf
 import numpy as np
 import datetime
 
@@ -21,20 +23,11 @@ def generate_daily_list(start_year, start_month, start_day):
 
     return list
 
-def sample_data(obat_id, data, list):
-    import json
-
-    with open('obat/' + obat_id + '.json') as jsonf:
-        json_loads = json.loads(jsonf.read())
-        
-        for i in list:
-            for j in json_loads['data'].items():
-                if i[0] == j[0]:
-                    i[1] = int(j[1])
-
-            for j in data.items():
-                if i[0] == j[0]:
-                    i[1] = int(j[1])
+def sample_data(data, list):
+    for i in list:
+        for j in data.items():
+            if i[0] == j[1]['day']:
+                i[1] = int(j[1]['total_obat_amount'])
 
     return list
 
@@ -48,8 +41,8 @@ def forcast(list, obat_id):
         sales.append(float(row[1]))
 
     series = np.array(sales)
-    from keras import models
-    model = models.load_model("model/" + obat_id + '.h5')
+
+    model = tf.keras.models.load_model("./model/" + obat_id + '.h5')
 
     forecast_series = series[split_time-window_size:-1]
     forecast = model_forecast(model, forecast_series, window_size, batch_size)
@@ -58,7 +51,6 @@ def forcast(list, obat_id):
     return results
 
 def model_forecast(model, series, window_size, batch_size):
-    import tensorflow as tf
     dataset = tf.data.Dataset.from_tensor_slices(series)    
     dataset = dataset.window(window_size, shift=1, drop_remainder=True)
     dataset = dataset.flat_map(lambda w: w.batch(window_size))
@@ -68,16 +60,28 @@ def model_forecast(model, series, window_size, batch_size):
 
     return forecast
 
-@API_prediction.get('/predict')
+def list_to_dict(list):
+    dict={}
+    for i in list:
+        dict[i[0]] = i[1]
+
+    return dict
+
+@API_prediction.post('/predict')
 def prediction():
     obat_id = request.get_json()['obat_id']
-    data = request.get_json()['data']
+    all_docs = {}
+    for doc in db_penjualan.where(filter=FieldFilter("obat_id", "==", obat_id)).stream():
+        all_docs[doc.id] = doc.to_dict()
 
     list = generate_daily_list(2022,7,29)
-    list = sample_data(obat_id, data, list)
+    list = sample_data(all_docs, list)
     results = forcast(list, obat_id)
+
+    data = list_to_dict(list)
     
     return jsonify({
         "obat_id": obat_id,
-        "predict": int(results[-1])
+        "predict": int(results[-1]),
+        "data": data
     }), 200
