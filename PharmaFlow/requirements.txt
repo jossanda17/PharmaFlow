@@ -3,10 +3,9 @@ grpcio
 protobuf
 
 tensorflow
-keras
 numpy
 flask
 firebase-admin
-gunicorn==20.1.0
-
+google-cloud-firestore
+gunicorn==21.2.0
 
