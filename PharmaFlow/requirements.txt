@@ -1,11 +1,12 @@
 --use-feature=2020-resolver
+--use-feature=fast-deps
 grpcio
 protobuf
 
-tensorflow
+tensorflow-cpu
+keras==2.6.0
 numpy
 flask
+google
 firebase-admin
-google-cloud-firestore
-gunicorn==21.2.0
-
+gunicorn==20.1.0
