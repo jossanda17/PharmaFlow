@@ -7,6 +7,5 @@ tensorflow-cpu
 keras
 numpy
 flask
-google
 firebase-admin
 gunicorn==20.1.0
