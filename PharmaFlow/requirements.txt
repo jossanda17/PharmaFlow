@@ -4,7 +4,7 @@ grpcio
 protobuf
 
 tensorflow-cpu
-keras==2.6.0
+keras
 numpy
 flask
 google
