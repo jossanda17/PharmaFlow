@@ -1,6 +1,5 @@
 from flask import Blueprint, request, jsonify
 from firebase_admin import firestore
-from google.cloud.firestore_v1.base_query import FieldFilter
 import tensorflow as tf
 import numpy as np
 import datetime
@@ -25,9 +24,9 @@ def generate_daily_list(start_year, start_month, start_day):
 
 def sample_data(data, list):
     for i in list:
-        for j in data.items():
-            if i[0] == j[1]['day']:
-                i[1] = int(j[1]['total_obat_amount'])
+        for j in data:
+            if i[0] == j[0]:
+                i[1] = int(j[1])
 
     return list
 
@@ -71,11 +70,16 @@ def list_to_dict(list):
 def prediction():
     obat_id = request.get_json()['obat_id']
     all_docs = {}
-    for doc in db_penjualan.where(filter=FieldFilter("obat_id", "==", obat_id)).stream():
+    for doc in db_penjualan.stream():
         all_docs[doc.id] = doc.to_dict()
+        
+    docs = []
+    for doc in all_docs.items():
+        if doc[1]['obat_id'] == obat_id:
+            docs.append([doc[1]['day'], doc[1]['total_obat_amount']])
 
     list = generate_daily_list(2022,7,29)
-    list = sample_data(all_docs, list)
+    list = sample_data(docs, list)
     results = forcast(list, obat_id)
 
     data = list_to_dict(list)
