@@ -1,13 +1,13 @@
 {
   "type": "service_account",
-  "project_id": "pharmaflow-407403",
-  "private_key_id": "80301d7f9101f51ed3a7d5cf2dbf118f84efe5e4",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCyLHYYxwyURzZ+\nKhTEUvZ5crBFD7g6ngx5maLrgHKFPyHsgdi4ElzBWOODuVUys2Zvvtb/lBXHh3Sa\nbUCK1EEJT8Z2Nt4z/LZJMjNgsgwWPrhW2gD1K6mY8z94GR416fOskHTmImaO4Aon\n9Dg1F/zIdLq9VYVjKyp2XoZE6bJGTwvFUdC+Xp005f+j8FOQ66907WCJYO2BK34G\nKlNmQQStPffEqEX+TqEGxaAnp2qku4hFgmF9dZ1/dtRO5Q7ObTW4UyopSlmTMDKj\nlFznPyt5oRHFJosPeFQ5Wq5Uu9BBg0NBBdMDHdIeQHu4AXTfwdAIslMt/XyBuFsX\nVkjKiyFbAgMBAAECggEAA3maHnOYMdAnWbovLrRB7S51p6Zd1nujDKZ/DShmxpiF\nOQ9zQmvOD7gdf9uYGmWk8TfMo65BgONW1kHPoqWIuzDC7MCEAImRci4FEhuG4Gwx\nIwIcRxJAVYskL47cQWFVu+wS8f+1XMLPD+ZtR9CdWoXqtBFviSnPXM2mwSaGfP6H\nT2pZ66gzFK1tDOrJ8J/Bd91Grrk6Fl9tEAPg6TrJ7tOzihEZQSNOytKSGt8aQ9YN\nPyFJXQmYdelYzr0KNN1+pUfT1za8epmsvKwiirw3VHxlv0Le28P3V84Hy6jg4XUR\n79v4bCIIYwlUfCYAzijz2HmFkI65mO4VeGFIJ4EtUQKBgQDrMM4NcvE28JFWkdEY\nFrcEvSLAyZdY1WKjVKDbTZaGc6ZaTCoofvTa2OVhv5zXpcpK4XEdDRveFCyKGWoi\nseBibLvTssywD8YUFGLK/8FvWPX6KYMrGr6k0o0uePqfQ8FQpDGmrkGN3fajdM8n\nTZHpialxg4uDApPt+KTAOfQfswKBgQDB8DD6sN2wmJZ8x6ZAM5E389jaytIwz4g8\ngLhZjT/9pBhc6AB5a17BTmi67t6QpRKXFKYtlPhkJjtI8zetw0jJm0nic5JFySlw\n4ryaQxF9VsJHOSLZo85+I1pq5BJRP9xED7BYsXWoic73uyXGTuai4C2GcREMHKCk\nEHurvKpjuQKBgQCvtzL7kVjutyWfDCqwWKg8fiKs7vCIikS7ysqzjnBb26P56tXE\nk7XUnCAku8guxcsxzuV30wdzEJeGRh6p9UOzxZE/RWLwV5ih/+kfyZ1313tPgBxj\n5ANzmWupwPFedHzGByahZafMmn1e+jKbJrVRSmyyRpnBM/fZ398XTzU5SQKBgQCK\n4ozg6spIDm4uu/dmIMfNbxaMURVHmUeyNGhQ0WPTK7G6zvaP/YFlI9bCkA/ZPC3c\n/g+nsvhTGEH6kxr7mE9G+atmvWcyDMZdrjJssr0SqpAE23kGrVVSZdT5mY04nGgM\nYcPjMGrXIKGULXT22Eg4uhxAHDaeGt47wAYgzcKkGQKBgDwSA3fKHKu+PIi+QBE5\nPPdO/lvk2zcZQRwK9nImK7k4vEhAT+JJrzH1Su9Vn37S5XiqapzZtAy1eJHRYlNo\nv93UYuU43CK/bcSaDIeLaRmOtnPTLKFa4FfTksTq24iAdQP7x8dSa1VeWAxkqkTj\nhcpGB14S5lWmkM2VQPdsVA5o\n-----END PRIVATE KEY-----\n",
-  "client_email": "firebase-adminsdk-bayfu@pharmaflow-407403.iam.gserviceaccount.com",
-  "client_id": "108549671511002456800",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-bayfu%40pharmaflow-407403.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
+  "project_id": "YOUR PROJECT ID",
+  "private_key_id": "YOUR PRIVAT KEY ID",
+  "private_key": "-----BEGIN PRIVATE KEY-----"
+  "client_email": "CLIENT EMAIL",
+  "client_id": "CLIENT ID",
+  "auth_uri": "YOUR AUTH URI",
+  "token_uri": "YOUR TOKEN URI",
+  "auth_provider_x509_cert_url": "",
+  "client_x509_cert_url": "",
+  "universe_domain": ""
 }
