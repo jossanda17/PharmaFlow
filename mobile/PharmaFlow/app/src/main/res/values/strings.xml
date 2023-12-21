@@ -1,3 +1,42 @@
-<resources>
-    <string name="app_name">PharmaFlow</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Pharmaflow</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_cart">Cart</string>
+    <string name="menu_history">History</string>
+    <string name="menu_product">Product</string>
+    <string name="attention">Attention</string>
+    <string name="back_button">Back</string>
+    <string name="delete">Delete</string>
+    <string name="delete_question">Are you sure you want to delete?</string>
+    <string name="no_item_description">\n\n\n\n\n\n\n\nTidak ada item di etalase</string>
+    <string name="edit_item_title">Edit Item</string>
+    <string name="item">Item</string>
+    <string name="item_detail_title">Item Details</string>
+    <string name="item_entry_title">Add Item</string>
+    <string name="item_name_req">Item Name*</string>
+    <string name="item_price_req">Item Price*</string>
+    <string name="no">No</string>
+    <string name="price">Price</string>
+    <string name="quantity_in_stock">Quantity in stock</string>
+    <string name="in_stock">%d in stock</string>
+    <string name="quantity_req">Quantity in Stock*</string>
+    <string name="save_action">Save</string>
+    <string name="sell">Sell</string>
+    <string name="yes">Yes</string>
+    <string name="required_fields">*required fields</string>
+    <string name="etalase">Etalase</string>
+
+
+    <string name="web_client_id" tools:ignore="TypographyDashes">126234664095-953a7hgrmu56aa9805v208tqnupgj5au.apps.googleusercontent.com</string>
+
+    <string name="navigation_item_home">Home</string>
+    <string name="navigation_item_profile">Profile</string>
+    <string name="terhubung_dengan_kami">Terhubung Dengan Kami</string>
+    <string name="selamat_datang_di_pharmaflow">Selamat datang di Pharmaflow!</string>
+    <string name="masuk_dengan_google">Masuk dengan Google</string>
+    <string name="confirmation">Konfirmasi</string>
+    <string name="exit_confirmation">Apakah anda yakin ingin keluar ?</string>
+    <string name="cancel">Batal</string>
+    <string name="logout">Keluar</string>
+
 </resources>
