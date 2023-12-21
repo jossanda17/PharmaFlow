@@ -1,0 +1,11 @@
+--use-feature=2020-resolver
+--use-feature=fast-deps
+grpcio
+protobuf
+
+tensorflow-cpu
+keras
+numpy
+flask
+firebase-admin
+gunicorn==20.1.0
