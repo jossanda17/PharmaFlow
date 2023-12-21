@@ -1,9 +1,9 @@
-#API SPEC
+# API SPEC
 
-##Endpoint Stok
+## Endpoint Stok
 
 
-POST | https://pharmaflow-407403.uc.r.appspot.com/stok/create
+POST | YOUR-API-URL/stok/create
 request :
 ```json
 {
@@ -19,7 +19,7 @@ response :
 }
 ```
 
-GET | https://pharmaflow-407403.uc.r.appspot.com/stok/read?obat_id=112
+GET |  YOUR-API-URL/stok/read?obat_id=112
 request :
 response :
 ```json
@@ -32,7 +32,7 @@ response :
 }
 ```
 
-PATCH | https://pharmaflow-407403.uc.r.appspot.com/stok/update
+PATCH |  YOUR-API-URL/stok/update
 request :
 ```json
 {
@@ -48,7 +48,7 @@ response :
 }
 ```
 
-DELETE | https://pharmaflow-407403.uc.r.appspot.com/stok/delete
+DELETE |  YOUR-API-URL/stok/delete
 request :
 ```json
 {
@@ -64,10 +64,10 @@ response :
 
 
 
-##Endpoint Penjualan
+## Endpoint Penjualan
 
 
-POST | https://pharmaflow-407403.uc.r.appspot.com/penjualan/create
+POST |  YOUR-API-URL/penjualan/create
 request :
 ```json
 {
@@ -84,7 +84,7 @@ response :
 }
 ```
 
-GET | https://pharmaflow-407403.uc.r.appspot.com/penjualan/read?obat_id=112
+GET |  YOUR-API-URL/penjualan/read?obat_id=112
 request :
 response :
 ```json
@@ -105,7 +105,7 @@ response :
 }
 ```
 
-PATCH | https://pharmaflow-407403.uc.r.appspot.com/stok/update
+PATCH |  YOUR-API-URL/stok/update
 request :
 ```json
 {
@@ -123,7 +123,7 @@ response :
 }
 ```
 
-DELETE | https://pharmaflow-407403.uc.r.appspot.com/stok/delete
+DELETE |  YOUR-API-URL/stok/delete
 request :
 ```json
 {
@@ -136,10 +136,10 @@ response :
 ```
 
 
-##Endpoint Prediction
+## Endpoint Prediction
 
 
-POST | https://pharmaflow-407403.uc.r.appspot.com/prediction/predict
+POST | YOUR-API-URL/prediction/predict
 request :
 ```json
 {
