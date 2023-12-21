@@ -59,6 +59,18 @@ def model_forecast(model, series, window_size, batch_size):
 
     return forecast
 
+def get_data_penjualan_by_obat_id(obat_id):
+    all_docs = {}
+    for doc in db_penjualan.stream():
+        all_docs[doc.id] = doc.to_dict()
+        
+    docs = []
+    for doc in all_docs.items():
+        if doc[1]['obat_id'] == obat_id:
+            docs.append([doc[1]['day'], doc[1]['total_obat_amount']])
+    
+    return docs
+
 def list_to_dict(list):
     dict={}
     for i in list:
@@ -69,19 +81,11 @@ def list_to_dict(list):
 @API_prediction.post('/predict')
 def prediction():
     obat_id = request.get_json()['obat_id']
-    all_docs = {}
-    for doc in db_penjualan.stream():
-        all_docs[doc.id] = doc.to_dict()
-        
-    docs = []
-    for doc in all_docs.items():
-        if doc[1]['obat_id'] == obat_id:
-            docs.append([doc[1]['day'], doc[1]['total_obat_amount']])
 
+    docs = get_data_penjualan_by_obat_id(obat_id)
     list = generate_daily_list(2022,7,29)
     list = sample_data(docs, list)
     results = forcast(list, obat_id)
-
     data = list_to_dict(list)
     
     return jsonify({
