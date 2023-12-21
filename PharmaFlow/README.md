@@ -4,6 +4,7 @@
 
 
 POST | YOUR-API-URL/stok/create
+
 request :
 ```json
 {
@@ -20,7 +21,9 @@ response :
 ```
 
 GET |  YOUR-API-URL/stok/read?obat_id=112
+
 request :
+
 response :
 ```json
 {
@@ -33,6 +36,7 @@ response :
 ```
 
 PATCH |  YOUR-API-URL/stok/update
+
 request :
 ```json
 {
@@ -49,6 +53,7 @@ response :
 ```
 
 DELETE |  YOUR-API-URL/stok/delete
+
 request :
 ```json
 {
@@ -68,6 +73,7 @@ response :
 
 
 POST |  YOUR-API-URL/penjualan/create
+
 request :
 ```json
 {
@@ -85,7 +91,9 @@ response :
 ```
 
 GET |  YOUR-API-URL/penjualan/read?obat_id=112
+
 request :
+
 response :
 ```json
 {
@@ -106,6 +114,7 @@ response :
 ```
 
 PATCH |  YOUR-API-URL/stok/update
+
 request :
 ```json
 {
@@ -124,6 +133,7 @@ response :
 ```
 
 DELETE |  YOUR-API-URL/stok/delete
+
 request :
 ```json
 {
@@ -140,6 +150,7 @@ response :
 
 
 POST | YOUR-API-URL/prediction/predict
+
 request :
 ```json
 {
