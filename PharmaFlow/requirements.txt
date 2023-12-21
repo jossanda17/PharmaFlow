@@ -1,4 +1,3 @@
---use-feature=2020-resolver
 --use-feature=fast-deps
 grpcio
 protobuf
